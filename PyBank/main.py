@@ -20,7 +20,7 @@ with open(bank_data, 'r') as csvfile:
     month = []
     revenue = []
     revenue_total = []
-    revenue average = []
+    revenue_average = []
 
 
 # Count number of months in file
@@ -35,7 +35,8 @@ with open(bank_data, 'r') as csvfile:
     print(revenue_total)
 
 # Average the changes of the profits/losses over the entire timeframe
-
+    revenue_average = revenue_total / len(month)
+    print(revenue_average)
 
 # Find the greatest increase of profit
 
