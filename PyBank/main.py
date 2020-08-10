@@ -8,7 +8,7 @@ bank_data = os.path.join('Resources', 'budget_data.csv')
 def totals(bank_data):
     # For readability, it can help to assign your values to variables with descriptive names
     month = str(bank_data[0])
-    revnue = int(bank_data[1])
+    revenue = int(bank_data[1])
 
 
 # Read in the CSV file
@@ -19,7 +19,8 @@ with open(bank_data, 'r') as csvfile:
     header = next(csvreader)
     month = []
     revenue = []
-    revenue_diff = []
+    revenue_total = []
+    revenue average = []
 
 
 # Count number of months in file
@@ -27,11 +28,14 @@ with open(bank_data, 'r') as csvfile:
         month.append(row[0])
     print(len(month))
 
-# Net profits/losses over entire timeframe
-    for row in csvreader:
-        revenue.append(row[1])
+# Net profits/losses over entire time frame
+    revenue.append(row[1])
+    revenue_int = map(int, revenue)
+    revenue_total = sum(revenue_int)
+    print(revenue_total)
 
 # Average the changes of the profits/losses over the entire timeframe
+
 
 # Find the greatest increase of profit
 
@@ -40,10 +44,3 @@ with open(bank_data, 'r') as csvfile:
 # Find the greatest decrease of profit
 
 # List the date and amount for greatest decrease of profit
-
-
-
-
-
-    # Loop through the data
-
