@@ -50,7 +50,6 @@ with open(bank_data, 'r') as csvfile:
     # Find the monthly change values
         revenue_change = int(row[1]) - previous_revenue
         month_change.append(revenue_change)
-        month_count.append(row[0])
 
     # Average the changes of the profits/losses over the entire timeframe
         revenue_average = int(net_revenue) / int(month_count)
@@ -75,6 +74,6 @@ print(f"Financial Analysis")
 print(f"------------------------")
 print(f"Total Months: {month_count}")
 print(f"Total: ${net_revenue}")
-print(f"Average Change: {average_change}")
+print(f"Average Change: {revenue_average}")
 print(f("Greatest Inc in Profits: {greatest_inc_month}, {highest_rev}"))
 print(f("Greatest Dec in Profits: {greatest_dec_month}, {lowest_rev}"))
