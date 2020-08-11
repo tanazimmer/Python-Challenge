@@ -12,6 +12,10 @@ li_votes = 0
 otooley_percent = []
 otooley_votes = 0
 voter_id = []
+candidate_percents = []
+winner = []
+candidate = []
+winning_candidate = []
 
 # Path to collect data from the Resources folder
 election_data = os.path.join('Resources', 'election_data.csv')
@@ -35,7 +39,6 @@ with open(election_data, 'r') as csvfile:
     row = next (csvreader)
  
  # Set variables within rows (+=, row[])
-    
 
 # Start forloop
     for row in csvreader:
@@ -44,11 +47,35 @@ with open(election_data, 'r') as csvfile:
         voter_id.append(row[0])
         vote_count = len(voter_id)
 
-    #List of Candidates who received votes
+    #List of Candidates who received votes?????
 
     #Percentage of votes each candidate won
 
+        if (candidate== "Khan"):
+            khan_votes += 1
+        elif (candidate== "Correy"):
+            correy_votes += 1
+        elif (candidate== "Li"):
+            li_votes += 1
+        else:
+            otooley_votes += 1
+
+    khan_percent = khan_votes / vote_count
+    correy_percent = correy_votes / vote_count
+    li_percent = li_votes / vote_count
+    otooley_percent = otooley_votes / vote_count
+
     #Winner
+    winner = max(khan_percent, correy_percent, li_percent, otooley_percent)
+
+    if winner== khan_percent:
+        winning_candidate = "Khan"
+    elif winner== correy_percent:
+        winning_candidate = "Correy"
+    elif winner== li_percent:
+        winning_candidate = "Li"
+    else:
+        winning_candidate = "O'Tooley"
 
 #print statements
 print(f"Election Results")
