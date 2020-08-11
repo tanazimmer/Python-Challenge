@@ -85,3 +85,14 @@ print(f"Winner: {winning_candidate}")
 
 
 #export txt file
+election_analysis = os.path.join('Analysis', 'election_analysis.txt')
+with open(election_analysis, 'w',) as txtfile:
+    txtfile.write(f"Election Results\n")
+    txtfile.write(f"------------------------\n")
+    txtfile.write(f"Total Votes: {vote_count}\n")
+    txtfile.write(f"Khan: {khan_percent: .3%} ({khan_votes})\n")
+    txtfile.write(f"Correy: {correy_percent: .3%} ({correy_votes})\n")
+    txtfile.write(f"Li: {li_percent: .3%} ({li_votes})\n")
+    txtfile.write(f"O'Tooley: {otooley_percent: .3%} ({otooley_votes})\n")
+    txtfile.write(f"------------------------\n")
+    txtfile.write(f"Winner: {winning_candidate}\n")
