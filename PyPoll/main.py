@@ -3,16 +3,11 @@ import csv
 
 #define variables to 0 or []
 vote_count = []
-khan_percent = []
 khan_votes = 0
-correy_percent = []
 correy_votes = 0
-li_percent = []
 li_votes = 0
-otooley_percent = []
 otooley_votes = 0
 voter_id = []
-candidate_percents = []
 winner = []
 candidate = []
 winning_candidate = []
@@ -51,11 +46,11 @@ with open(election_data, 'r') as csvfile:
 
     #Percentage of votes each candidate won
 
-        if (candidate== "Khan"):
+        if (row[2]== "Khan"):
             khan_votes += 1
-        elif (candidate== "Correy"):
+        elif (row[2]== "Correy"):
             correy_votes += 1
-        elif (candidate== "Li"):
+        elif (row[2]== "Li"):
             li_votes += 1
         else:
             otooley_votes += 1
@@ -86,7 +81,7 @@ print(f"Correy: {correy_percent: .3%} ({correy_votes})")
 print(f"Li: {li_percent: .3%} ({li_votes})")
 print(f"O'Tooley: {otooley_percent: .3%} ({otooley_votes})")
 print(f"------------------------")
-print(f"Winner: {winner}")
+print(f"Winner: {winning_candidate}")
 
 
 #export txt file
