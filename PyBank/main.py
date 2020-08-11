@@ -30,7 +30,6 @@ with open(bank_data, 'r') as csvfile:
     row = next (csvreader)
  
  # Set variables within rows
-    total_months += 1
     net_revenue = int(row[1])
     previous_revenue = int(row[1])
     greatest_inc = int(row[1])

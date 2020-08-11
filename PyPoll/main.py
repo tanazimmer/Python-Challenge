@@ -2,10 +2,19 @@ import os
 import csv
 
 #define variables to 0 or []
-
+vote_count = []
+khan_percent = []
+khan_votes = 0
+correy_percent = []
+correy_votes = 0
+li_percent = []
+li_votes = 0
+otooley_percent = []
+otooley_votes = 0
+voter_id = []
 
 # Path to collect data from the Resources folder
-bank_data = os.path.join('Resources', 'election_data.csv')
+election_data = os.path.join('Resources', 'election_data.csv')
 
 # Define the function and have it accept the 'election_data' as its sole parameter
 
@@ -16,7 +25,7 @@ def poll_results(election_data):
     candidate = str(election_data[2])
 
 # Read in the CSV file
-with open(e;e_data, 'r') as csvfile:
+with open(election_data, 'r') as csvfile:
 
     # Split the data on commas
     csvreader = csv.reader(csvfile, delimiter=',')
@@ -26,12 +35,14 @@ with open(e;e_data, 'r') as csvfile:
     row = next (csvreader)
  
  # Set variables within rows (+=, row[])
-
+    
 
 # Start forloop
     for row in csvreader:
 
     #total number of votes cast (count the Voter_IDs)
+        voter_id.append(row[0])
+        vote_count = len(voter_id)
 
     #List of Candidates who received votes
 
@@ -43,20 +54,12 @@ with open(e;e_data, 'r') as csvfile:
 print(f"Election Results")
 print(f"------------------------")
 print(f"Total Votes: {vote_count}")
-print(f"Total: ${net_revenue}")
-print(f"Average Change: {revenue_average}")
-print(f"Greatest Inc in Profits: {greatest_inc_month}, {highest_rev}")
-print(f"Greatest Dec in Profits: {greatest_dec_month}, {lowest_rev}")
-
-  -------------------------
-  Khan: 63.000% (2218231)
-  Correy: 20.000% (704200)
-  Li: 14.000% (492940)
-  O'Tooley: 3.000% (105630)
-  -------------------------
-  Winner: Khan
-  -------------------------
-  ```
+print(f"Khan: {khan_percent: .3%} ({khan_votes})")
+print(f"Correy: {correy_percent: .3%} ({correy_votes})")
+print(f"Li: {li_percent: .3%} ({li_votes})")
+print(f"O'Tooley: {otooley_percent: .3%} ({otooley_votes})")
+print(f"------------------------")
+print(f"Winner: {winner}")
 
 
 #export txt file
