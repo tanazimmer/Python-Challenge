@@ -79,3 +79,16 @@ print(f"Greatest Inc in Profits: {greatest_inc_month}, {highest_rev}")
 print(f"Greatest Dec in Profits: {greatest_dec_month}, {lowest_rev}")
 
 bank_data.close()
+
+analysis_file = open("analysis_file.txt","w")
+
+analysis_file.write("\n
+print(f"Financial Analysis")
+print(f"------------------------")
+print(f"Total Months: {month_count}")
+print(f"Total: ${net_revenue}")
+print(f"Average Change: {revenue_average}")
+print(f"Greatest Inc in Profits: {greatest_inc_month}, {highest_rev}")
+print(f"Greatest Dec in Profits: {greatest_dec_month}, {lowest_rev}")")
+
+analysis_file.close()
