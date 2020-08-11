@@ -52,7 +52,7 @@ with open(bank_data, 'r') as csvfile:
         previous_revenue = int(row[1])
 
     # Average the changes of the profits/losses over the entire timeframe
-        revenue_average = (sum(month_change) / len(month_change)) / 100
+        revenue_average = (sum(month_change) / len(month_change))
 
     # Find the greatest increase of profit
         if int(row[1]) > greatest_inc:
@@ -74,6 +74,17 @@ print(f"Financial Analysis")
 print(f"------------------------")
 print(f"Total Months: {month_count}")
 print(f"Total: ${net_revenue}")
-print(f"Average Change: {revenue_average: .2%}")
+print(f"Average Change: ${revenue_average: .2f}")
 print(f"Greatest Inc in Profits: {greatest_inc_month}, {highest_rev}")
 print(f"Greatest Dec in Profits: {greatest_dec_month}, {lowest_rev}")
+
+#export txt file
+bank_analysis = os.path.join('Analysis', 'bank_analysis.txt')
+with open(bank_analysis, 'w',) as txtfile:
+    txtfile.write(f"Financial Analysis\n")
+    txtfile.write(f"------------------------\n")
+    txtfile.write(f"Total Months: {month_count}\n")
+    txtfile.write(f"Total: ${net_revenue}\n")
+    txtfile.write(f"Average Change: ${revenue_average: .2f}\n")
+    txtfile.write(f"Greatest Inc in Profits: {greatest_inc_month}, {highest_rev}\n")
+    txtfile.write(f"Greatest Dec in Profits: {greatest_dec_month}, {lowest_rev}\n")
