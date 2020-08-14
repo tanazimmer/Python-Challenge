@@ -33,7 +33,6 @@ with open(election_data, 'r') as csvfile:
     csvheader = next(csvreader)
     row = next (csvreader)
  
- # Set variables within rows (+=, row[])
 
 # Start forloop
     for row in csvreader:
@@ -42,7 +41,6 @@ with open(election_data, 'r') as csvfile:
         voter_id.append(row[0])
         vote_count = len(voter_id)
 
-    #List of Candidates who received votes?????
 
     #Percentage of votes each candidate won
 
