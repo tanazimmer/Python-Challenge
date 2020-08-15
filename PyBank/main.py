@@ -41,7 +41,7 @@ with open(bank_data, 'r') as csvfile:
     for row in csvreader:
 # Count number of months in file
         month.append(row[0])
-        month_count = len(month)
+        month_count = len(month) + 1
 
     # Net profits/losses over entire time frame
         net_revenue += int(row[1])
