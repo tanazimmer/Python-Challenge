@@ -21,4 +21,10 @@ In this challenge, I was provided with financial records of a company comprising
     - The greatest increase in profits (data and amount) over the entire period
     - The greatest decrease in losses (data and amount) over the entire period
 
-The results were then exported to a text file.
+Financial Analysis
+------------------------
+Total Months: 86
+Total: $38382578
+Average Change: $-2315.12
+Greatest Inc in Profits: Feb-2012, 1926159
+Greatest Dec in Profits: Sep-2013, -2196167
