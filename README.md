@@ -10,7 +10,7 @@ The results were then exported to a text file.
 
 
 # Python-Challenge - PyBank
-In this challenge, I was provided with financial records of a company comprising of 86 lines composed of columns 'Date' and 'Profits/Losses'.  THe task was to create a python script to analyze the dataset and calculate each of the following:
+In this challenge, I was provided with financial records of a company comprising of 86 lines composed of columns 'Date' and 'Profits/Losses'.  The task was to create a python script to analyze the dataset and calculate each of the following:
 
     - The total number of months included in the dataset
     - The net total amount of "Profit/Losses" over the entire period
